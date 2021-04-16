@@ -1,25 +1,25 @@
 import java.util.*;
 import java.util.regex.*;
 
-
 public class UserRegistration
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Enter Email");
+		System.out.println("Enter Mobile Number");
 
 		Scanner sc = new Scanner(System.in);
-		String email = sc.next();
+		String mobile = sc.nextLine();
 
-		Pattern pattern = Pattern.compile("^[a-z]{1,}[.]([a-z]*)[@][a-z]{1,}[.]" + "[a-z]{1,}[.]([a-z]*)");
-		Matcher matcher = pattern.matcher(email);
+		Pattern pattern = Pattern.compile("^[0-9]{2}\\s[0-9]{10}$");
+		Matcher matcher = pattern.matcher(mobile);
+
 		if (matcher.matches())
 		{
-			System.out.println("Valid Email");
+			System.out.println("Valid Mobile Number");
 		}
 		else
 		{
-			System.out.println("Invalid Email");
+			System.out.println("Invalid Mobile Number");
 		}
 	}
 }
