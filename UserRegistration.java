@@ -9,7 +9,7 @@ public class UserRegistration
 
 		Scanner sc = new Scanner(System.in);
 		String mobile = sc.nextLine();
-
+		//Check weather Mobile nuber valid or not
 		Pattern pattern = Pattern.compile("^[0-9]{2}\\s[0-9]{10}$");
 		Matcher matcher = pattern.matcher(mobile);
 
