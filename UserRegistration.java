@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.regex.*;
 
-public class UserRegistration
+public class UserRegistration 
 {
 	public static void main(String[] args) 
 	{
@@ -10,16 +10,20 @@ public class UserRegistration
 		Scanner sc = new Scanner(System.in);
 		String pwd = sc.nextLine();
 
-		Pattern pattern = Pattern.compile("[a-zA-Z0-9]{8,}");
-		Matcher matcher = pattern.matcher(pwd);
+		Pattern pattern = Pattern.compile("(?=.*[A-Z])[a-zA-Z0-9]{8,}");
+		Matcher matcher = pattern.matcher(pwd);//
 
 		if (matcher.matches())
 		{
-			System.out.println("Valid According to Rule 1");
+			System.out.println("Valid According to Rule 1 & 2");
+			System.out.println("1 : Must have 8 characters"
+					+ "\n2 : Must have atleast one UpperCase");
 		}
 		else
 		{
-			System.out.println("Invalid According to Rule 1");
+			System.out.println("Invalid According to Rule 1 & 2");
+			System.out.println("1 : Must have 8 characters"
+					+ "\n2 : Must have atleast one UpperCase");
 		}
 	}
 }
