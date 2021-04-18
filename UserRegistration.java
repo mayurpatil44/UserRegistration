@@ -3,23 +3,23 @@ import java.util.regex.*;
 
 public class UserRegistration
 {
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	{
-		System.out.println("Enter Mobile Number");
+		System.out.println("Enter Password");
 
 		Scanner sc = new Scanner(System.in);
-		String mobile = sc.nextLine();
-		//Check weather Mobile nuber valid or not
-		Pattern pattern = Pattern.compile("^[0-9]{2}\\s[0-9]{10}$");
-		Matcher matcher = pattern.matcher(mobile);
+		String pwd = sc.nextLine();
+
+		Pattern pattern = Pattern.compile("[a-zA-Z0-9]{8,}");
+		Matcher matcher = pattern.matcher(pwd);
 
 		if (matcher.matches())
 		{
-			System.out.println("Valid Mobile Number");
+			System.out.println("Valid According to Rule 1");
 		}
 		else
 		{
-			System.out.println("Invalid Mobile Number");
+			System.out.println("Invalid According to Rule 1");
 		}
 	}
 }
