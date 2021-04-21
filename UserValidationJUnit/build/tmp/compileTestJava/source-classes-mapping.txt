@@ -1,0 +1,2 @@
+com/uservalid/UserRegistrationTest.java
+ com.uservalid.UserRegistrationTest
